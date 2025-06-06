@@ -7,21 +7,13 @@ The most basic FastMCP application as an AZD template ready for Azure App Servic
 
 ## Usage
 
-1. Install AZD and run the following command to initialize the project.
-
-```bash
-azd init --template Azure-Samples/azd-simple-fastapi-appservice
-```
-
-This command will clone the code to your current folder and prompt you for the following information:
-
-- `Environment Name`: This will be used as a prefix for the resource group that will be created to hold all Azure resources. This name should be unique within your Azure subscription.
+1. Clone the repo and install AZD
 
 2. Login to your Azure account.
 ```bash
 azd auth login
 ```
-NOTE: if using a government cloud, you will need to configure azd to use that cloud before logging in
+> NOTE: if using a government cloud, you will need to configure azd to use that cloud before logging in
 ```bash
 azd config set cloud.name AzureUSGovernment
 azd auth login
@@ -32,6 +24,7 @@ azd auth login
 ```bash
 azd up
 ```
+> NOTE: the first run will prompt you ```Enter a unique environment name:``` This will be used as a prefix for the resource group that will be created to hold all Azure resources. This name should be unique within your Azure subscription.
 
 This command will prompt you for the following information:
 - `Azure Location`: The Azure location where your resources will be deployed.
