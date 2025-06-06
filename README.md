@@ -1,24 +1,7 @@
-<!--
----
-page_type: sample
-languages:
-- azdeveloper
-- python
-- bicep
-- html
-products:
-- azure
-- azure-app-service
-urlFragment: azure-simple-fastapi-appservice
-name: Deploy a minimal FastAPI Application on Azure App Service (Python)
-description: A tiny, no-frills, template to deploy Python's FastAPI web framework to Azure App Service in the free tier.
----
--->
-<!-- YAML front-matter schema: https://review.learn.microsoft.com/en-us/help/contribute/samples/process/onboarding?branch=main#supported-metadata-fields-for-readmemd -->
 
-# Simple FastAPI AZD Template
+# Simple FastMCP AZD Template
 
-The most basic FastAPI "hello world" application as an AZD template ready for Azure App Service
+The most basic FastMCP application as an AZD template ready for Azure App Service
 
 ![system diagram](diagram.png)
 
@@ -36,6 +19,11 @@ This command will clone the code to your current folder and prompt you for the f
 
 2. Login to your Azure account.
 ```bash
+azd auth login
+```
+NOTE: if using a government cloud, you will need to configure azd to use that cloud before logging in
+```bash
+azd config set cloud.name AzureUSGovernment
 azd auth login
 ```
 
